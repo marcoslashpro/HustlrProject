@@ -15,7 +15,7 @@ The stack used in this project is:
 I suggest using `uv` as the package manager as it benchmarked to be **10x to 100x** fater than PIP and makes the entire project management process super easy, from start to end, but every step here can be also done using PIP.
 1. Clone the repo and cd into it:
 ```
-git clone https://github.com/marcoslashpro/HustlrProject.git && cd hustlr_project
+git clone https://github.com/marcoslashpro/HustlrProject.git && cd HustlrProject
 ```
 2. Install dependencies
 ```
