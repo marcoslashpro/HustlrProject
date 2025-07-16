@@ -1,6 +1,7 @@
 from sqlalchemy import (
   create_engine,
   Column,
+  UUID,
   Integer,
   String,
   DateTime,
@@ -31,7 +32,7 @@ class db_conn():
 class Product(Base):
   # TODO: Add user 1-to-many relationship
   __tablename__ = 'product'
-  id = Column(Integer, primary_key=True, autoincrement=False)
+  id = Column(UUID, primary_key=True, autoincrement=False)
   created = Column(DateTime, default=datetime.now())
   name = Column(String)
   category = Column(String) # TODO: Add enums for categories

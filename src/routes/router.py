@@ -3,11 +3,13 @@ from fastapi import APIRouter, HTTPException
 from src.routes.models import db_conn, session, Product, select, insert
 from src.routes.schemas import ProductModel
 
+from uuid import UUID
+
 
 products_router = APIRouter(prefix='/products', tags=['Products'])
 
 
-@products_router.post('/')
+@products_router.post('')
 async def add_new_product(product: ProductModel):
   try:
     with db_conn() as conn:
@@ -22,7 +24,7 @@ async def add_new_product(product: ProductModel):
   return f"Product {product} added successfully!"
 
 
-@products_router.get('/', response_model=list[ProductModel])
+@products_router.get('', response_model=list[ProductModel])
 async def get_products(category: str | None = None):
   if category:
     result = get_product_by_category(category)
@@ -40,9 +42,9 @@ async def get_products(category: str | None = None):
 
 
 @products_router.get('/{id}', response_model=ProductModel)
-async def get_product_by_id(id: str):
+async def get_product_by_id(id: UUID):
   with db_conn() as conn:
-    result = conn.execute(select(Product).where(Product.name == id)).first()
+    result = conn.execute(select(Product).where(Product.id == id)).first()
 
   if not result:
     raise HTTPException(
