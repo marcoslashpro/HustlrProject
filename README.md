@@ -12,7 +12,7 @@ The stack used in this project is:
 - `SQLAlchemy`: As the Database management system of choice. `SQLAlchemy` makes very easy to setup and spin a database with very few lines of code, allowing us to create stable connections and sessions in a breeze.
 
 ## How to run the project
-I suggest using `uv` as the package manager as it benchmarked to be 10 to 100x fater than PIP and make s the entire project management process super easy, from start to end, but every step here can be also done using PIP.
+I suggest using `uv` as the package manager as it benchmarked to be **10x to 100x** fater than PIP and makes the entire project management process super easy, from start to end, but every step here can be also done using PIP.
 1. Clone the repo and cd into it:
 ```
 git clone https://github.com/marcoslashpro/HustlrProject.git && cd hustlr_project
