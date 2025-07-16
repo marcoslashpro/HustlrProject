@@ -8,7 +8,7 @@ Let's jump straight into the application.
 The stack used in this project is:
 - `Python`: The programming language of choice,
 - `FastAPI`: As the framework used to build the RESTfulAPI;
-- `Pydantic`: As the Data validation model, used in combination with `FastAPI` is significantly streamlines the process of authenticating both data sent from the user and fetched data from databases.
+- `Pydantic`: As the Data validation model, used in combination with `FastAPI` it significantly streamlines the process of authenticating both data sent from the user and fetched data from databases.
 - `SQLAlchemy`: As the Database management system of choice. `SQLAlchemy` makes very easy to setup and spin a database with very few lines of code, allowing us to create stable connections and sessions in a breeze.
 
 ## How to run the project
